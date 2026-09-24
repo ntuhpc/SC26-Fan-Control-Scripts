@@ -22,10 +22,10 @@ percent=$((10#$percent))
 command -v ipmitool >/dev/null || { echo "ipmitool not found" >&2; exit 2; }
 
 run_ipmitool() {
-    printf 'Executing as root: ipmitool'
+    printf 'Executing: sudo ipmitool'
     printf ' %s' "$@"
     printf '\n'
-    ipmitool "$@"
+    sudo ipmitool "$@"
 }
 
 exec 9>"$LOCK"
