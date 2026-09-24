@@ -157,6 +157,9 @@ settings. Both nodes should report `OK`. At that point setup is complete.
 
 The general form is `fanctl COMMAND OPTIONS`. Run it from a terminal on cp1
 or cp3. You do not put `sudo` before `fanctl`; it uses the approved helper.
+For debugging, the helper prints each complete `ipmitool` command before it
+runs it. The message says `Executing as root` because `fanctl` starts the
+helper through the configured sudo rule.
 
 Parameter meanings:
 
